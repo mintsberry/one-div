@@ -1,0 +1,43 @@
+.float {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: linear-gradient(45deg, #52ffaf, #2196f3);
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .2);
+}
+
+.float::before,
+.float::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  display: block;
+  margin-left: -9px;
+  border-radius: 3px;
+  width: 18px;
+  height: 3px;
+  background-color: white;
+  transition: all .2s ease;
+}
+
+.float::before {
+  transform: translateY(12px);
+  filter: drop-shadow(0 6px 0 white);
+}
+
+.float::after {
+  transform: translateY(24px)
+}
+
+.float:hover::before {
+  filter: none;
+  transform: translateY(18px) rotate(-45deg);
+}
+
+.float:hover::after {
+  transform: translateY(18px) rotate(45deg)
+}
