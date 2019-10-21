@@ -1,0 +1,39 @@
+.teacup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  border: 4px solid rgba(30, 29, 20);
+  border-radius: 0 0 16px 16px;
+  border-top-width: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #fff3da;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+  color: rgb(30, 29, 20);
+  overflow: hidden;
+  box-shadow: 0 1px 2px 1px rgba(0,0,0,.2);
+  transform: translateZ(0);
+}
+
+.teacup::before,
+.teacup::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  right: -120px;
+  height: 20px;
+}
+
+.teacup::before {
+  background-color: rgb(255, 214, 125);
+}
+.teacup::after {
+  background-color: rgb(255, 174, 0);
+}
